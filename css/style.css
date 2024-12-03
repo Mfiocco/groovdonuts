@@ -586,16 +586,23 @@ section {
 #home-section1 {
     background-color: #FAE9BB;
     background-image: url(../img/home-section1img.png);
-    background-size: 100% 100%, contain;
-    background-position: center top;
+    background-size: cover;
+    background-position: center -12vw;
     background-repeat: no-repeat;
     text-align: center;
-    /* padding: 0;
-    margin: 0; */
+    /* padding: 40vw 0; */
+
+    .donut-wrapper {
+        border: 1px solid red;
+    }
+    
+    
     
     h1 {
         color: #fff;
-        font-size: 6em;
+        font-size: 10vw;
+        margin: 0;
+        
     }
     h4 {
         color: #7C5B04;
@@ -606,16 +613,44 @@ section {
         margin-right: auto;
     }
 
+      .button {
+        text-align: center;
+        background-color: #72C5A8;
+        color: white;
+        border: none;
+
+    }
+
+    .button:hover {
+        background-color: #53967f;
+        color: white;
+        border: none;
+    }
+
 }
 #home-section2 {
     background-color: #CBE5E5;
-    background-image: url(../img/bg-swirl-blue.png);
+    background-image: url(../img/bg-swirl-blue2.png);
     background-size: 100% 100%, contain;
     background-position: center top;
     background-repeat: no-repeat;
 
     h1 {
         color: #336869;
+    }
+
+    .button {
+        text-align: center;
+        background-color: #B0B22C;
+        color: white;
+        border: none;
+
+    }
+
+    .button:hover {
+        background-color: #80821f;
+        color: white;
+        border: none;
     }
 }
 #home-section3 {
@@ -628,6 +663,20 @@ section {
     h1 {
         color: #AE3B30;
         text-align: right;
+    }
+
+    .button {
+        text-align: center;
+        background-color: #9B4CCC;
+        color: white;
+        border: none;
+
+    }
+
+    .button:hover {
+        background-color: #6d3391;
+        color: white;
+        border: none;
     }
 }
 
@@ -719,6 +768,43 @@ section {
     }
 }
 
+#about-section2 {
+    background-image: url(../img/about-bg.png);
+    background-size: cover;
+    background-position: initial;
+    background-repeat: no-repeat;
+
+    img {
+        padding-top: 5em;
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .button {
+        text-align: center;
+        background-color: #72C5A8;
+        border: none;
+
+    }
+
+    .button:hover {
+        background-color: #53967f;
+        color: white;
+        border: none;
+    }
+
+    #megaphone {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 4em;
+    }
+    
+}
+
 
 /* HERO SECTION */
 
@@ -736,6 +822,33 @@ section {
    
     h1, h2, h3 {
         color: var(--color-hero-headings);
+    }
+
+    .button {
+        text-align: center;
+        background-color: #FEFFB3;
+        color: #636412;
+        border: none;
+    
+
+    }
+
+    .button:hover {
+        background-color: #979847;
+        color: white;
+        border: none;
+
+    }
+
+    .light {
+        border-color: var(--color-links-light);
+        background-color: black;
+        color: white;
+
+        &:hover {
+            border-color: var(--color-links-lighter);
+            background-color: black;
+        }
     }
 
 }
@@ -811,7 +924,7 @@ section {
 
 .shop-hero {
     background-color: #ECBDAC;
-    background-image: url(../img/bg-swirl-red2.png);
+    background-image: url(../img/bg-swirl-red.png);
     /* background-size: 100% 100%, contain; */
     background-size: cover;
     background-position: center top;
@@ -819,7 +932,7 @@ section {
     color: var(--color-hero-text);
     text-align: center;
 
-    .xl-menu {
+    .xl-shop {
         color: #AE3B30;
         font-family: Poppins;
         font-size: 25vw;
@@ -865,6 +978,51 @@ section {
     }
     
 }
+
+.about-hero {
+    background-image: url(../img/groov-sign.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+    .xl-about {
+        color: #F0FEFE;
+        font-family: Poppins;
+        font-size: 25vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 20em;
+    }
+
+
+    h2 {
+        padding-top: 6em;
+        color: #FFF;
+        text-align: right;
+        font-family: Anton;
+        font-size: 3vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 25ch;
+    
+        
+    }
+    
+    .about-hero-type {
+        color: #4da6a6;
+        font-family: Afacad;
+        font-size: 4vw;
+        font-style: italic;
+        font-weight: 600;
+        line-height: normal;
+    }
+        
+
+}
+
 
 /* SITE FOOTER */
 .site-footer {
@@ -926,6 +1084,7 @@ section {
         margin-right: auto;
         display: flex;
         align-items: center;
+        justify-content: center;
 
     }
 
@@ -938,6 +1097,7 @@ section {
         margin-left: auto;
         margin-right: auto;
         align-items: center;
+        justify-content: center;
     }
 
 }
