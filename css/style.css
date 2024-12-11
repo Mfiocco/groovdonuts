@@ -431,6 +431,12 @@ body {
         flex-direction: row-reverse;
         align-items: center;
 
+        ul > li:hover {
+            background-color: #f5daac;
+            border-radius: 50%;
+        
+        }
+
 
         /* SHOW MENU BUTTON IF USING TOGGLE NAV */
         .site-menu-button {
@@ -588,15 +594,11 @@ section {
 #home-section1 {
     background-color: #FAE9BB;
     background-image: url(../img/home-section1img.png);
-    background-size: cover;
+    background-size: 100% auto;
     background-position: center -12vw;
     background-repeat: no-repeat;
     text-align: center;
     /* padding: 40vw 0; */
-
-    .donut-wrapper {
-        border: 1px solid red;
-    }
     
     
     
@@ -615,7 +617,7 @@ section {
         margin-right: auto;
     }
 
-      .button {
+    .button {
         text-align: center;
         background-color: #72C5A8;
         color: white;
@@ -628,7 +630,6 @@ section {
         color: white;
         border: none;
     }
-
 }
 #home-section2 {
     background-color: #CBE5E5;
@@ -668,6 +669,8 @@ section {
     }
 
     .button {
+        margin-left: 70%;
+        align-items: right;
         text-align: center;
         background-color: #9B4CCC;
         color: white;
@@ -680,39 +683,85 @@ section {
         color: white;
         border: none;
     }
-}
 
-.menu-top-donut-player {
-    display: flex;
-    width: 100%;
-    height: 100%;
     
 }
 
-#menu-section2 {
-    background-color: #CBE5E5;
-    background-image: url(../img/rotatingword-banner.png);
-    background-size: 100% 100%, contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-
-    .menu-banner-type {
-        color: #323232;
-        font-family: Anton;
-        font-size: 5vw;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-    .rotating-word {
-        color: #2B578D;
-        font-family: Anton;
-        font-size: 5vw;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+.rotate-vinyl {
+    -webkit-animation: spin 5s linear infinite;
+    animation: spin 5s linear infinite;
+}
+    
+@keyframes spin {
+    100% {
+        rotate: 360deg;
     }
 }
+
+.menu-top-donut-player {
+    img {
+        width: 100%;
+        display: block;
+        margin-top: -6%;
+        z-index: -1;
+
+    }    
+}
+
+#menu-section2 {
+
+    background-image: url(../img/rotatingword-banner.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    display: block;
+    z-index: 1;
+    margin-top: -4%;
+    position: relative;
+    padding-bottom: 6em;
+
+}
+
+.rotate-word{
+    font-size: 6em;
+    position: relative;
+    font-family: Anton;
+    font-size: 5vw;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+    top: 10%;
+    left: 2%;
+}
+.rotate-word::after{
+    content: ' ';
+    position: absolute;
+    padding-left: 30px;
+    font-family: Anton;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #2B578D;
+    /* width: 526px; */
+    margin-left: 20px;
+    animation: textrotate 5s linear infinite;
+    -webkit-animation: textrotate 5s linear infinite;
+}
+@keyframes textrotate{
+    0%{
+    content: 'UNIQUE';
+    }
+    50%{
+    content: 'GROOVY';
+    }
+    100%{
+    content: 'DELICIOUS';
+    }
+}
+       
+
+    
+
+    
+
 .menu-marquee-section {
     background-color: #FFFAF2;
     /* background-image: url(../img/menu-carousel.png);
@@ -761,53 +810,71 @@ section {
         line-height: normal; 
         margin-top: 0;      
     }
-    
-    .handshake {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 4em;
-        margin-bottom: 10em;
-    }
 }
 
 
 .shop-top-donut-player {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background-color: #ECBDAC;
-    
-    
-}
+    img {
+        width: 100%;
+        display: block;
+        margin-top: -6%;
+
+    }
+}   
 
 #shop-section2 {
-    background-color: #FFFAF2;
     background-image: url(../img/rotating-wordsbanner2.png);
-    background-size: 100% 100%, cover;
-    background-position: center top;
+    background-size: 100% auto;
     background-repeat: no-repeat;
+    display: block;
+    z-index: 1;
+    margin-top: -5%;
+    position: relative;
+    padding-bottom: 4em;
 
-    .shop-banner-type {
-        color: #323232;
-        font-family: Anton;
-        font-size: 5vw;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+
+}
+
+
+.rotate-word2 {
+    position: relative;
+    font-family: Anton;
+    font-size: 5vw;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+    /* top: 10%; */
+    left: 2%;
+    width: 20ch;
+}
+.rotate-word2::after {
+    content: ' ';
+    position: absolute;
+    padding-left: 30px;
+    font-family: Anton;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #8D2B2B;
+    width: 526px;
+    margin-left: 20px;
+    animation: textrotate2 5s linear infinite;
+    -webkit-animation: textrotate2 5s linear infinite;
+}
+@keyframes textrotate2{
+    0%{
+    content: 'TASTE';
     }
-    .rotating-word {
-        color: #8D2B2B;
-        font-family: Anton;
-        font-size: 5vw;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+    50%{
+    content: 'MOOD';
+    }
+    100%{
+    content: 'VIBE';
     }
 }
 
 .shop-marquee-section {
     background-color: #FFFAF2;
+    
 
 }
 
@@ -822,7 +889,18 @@ section {
         margin-top: 10em;
         margin-bottom: 15em;
     }
+
+    .new-merch-promo {
+        display: block;
+        object-fit: cover;
+    }
     
+}
+
+#about-section1 {
+    h1 {
+        color: #61563f;
+    }
 }
         
 
@@ -846,6 +924,10 @@ section {
         text-align: center;
         background-color: #72C5A8;
         border: none;
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+        margin-top: 2em;
 
     }
 
@@ -855,12 +937,7 @@ section {
         border: none;
     }
 
-    #megaphone {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding-bottom: 4em;
-    }
+    
     
 }
 
@@ -891,14 +968,6 @@ section {
         line-height: .3em;
         margin-bottom: 2em;
     }
-
-    .hand {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 4em;
-    }
-
 }
 
 #contact-section2 {
@@ -916,6 +985,7 @@ section {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        padding-top: 2em;
     }
 
     h4 {
@@ -926,12 +996,28 @@ section {
         text-align: center;
     }
 
+    .location-icon {
+        display: flex;
+        margin-left: 17%;
+        margin-top: -11%;
+        /* border: 1px solid red; */
+    }
+
 
     .map {
-        border: 1px solid red;
         margin-bottom: 15em;
         opacity: 70%;
+        /* margin-top: -6%; */
+        transform: scale(1.1);
     }
+}
+
+.hours {
+    display: inline-block;
+    margin-left: 43%;
+    margin-top: -1em;
+    /* margin-right: auto; */
+    
 }
 
 
@@ -1080,21 +1166,20 @@ section {
     .arrow {
         padding-bottom: 2em;
     }
-    
-
-   
-    /* h1, h2, h3 {
-        color: var(--color-hero-headings);
-    } */
 
     img {
         display: inline-block;
         margin-top: -15vw;
         position: relative;
         z-index: 10;
-    }
-    
+    }      
 }
+
+/* .arrow {
+    svg {
+        padding-bottom: 5em;
+    }   
+} */
 
 .about-hero {
     background-image: url(../img/groov-sign.png);
@@ -1117,13 +1202,15 @@ section {
     h2 {
         padding-top: 6em;
         color: #FFF;
-        text-align: left;
+        text-align: right;
         font-family: Anton;
         font-size: 3vw;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        width: 25ch;
+        width: 26ch;
+        margin-left: auto;
+        padding-right: .5em;
     
         
     }
@@ -1219,12 +1306,12 @@ section {
         margin-left: auto;
         margin-right: auto;
         display: flex;
-        align-items: center;
         justify-content: center;
+        padding-top: 5em;
 
     }
 
-    .one-half .footer-logo-bg {
+    .footer-logo-bg {
         background-color: #5DAAB2;
 
     }
@@ -1232,8 +1319,15 @@ section {
     .social-icons {
         margin-left: auto;
         margin-right: auto;
-        align-items: center;
+        display: flex;
         justify-content: center;
+        padding-top: 2em;
+        gap: var(--unit-small);
+        padding-bottom: 2em;
+
+        /* &:hover {
+            color: purple;
+        } */
     }
 
 }
@@ -1247,6 +1341,7 @@ section {
     padding: 1em;
     justify-content: space-between;
 }
+
 
 /* ----------------- */
 /* --UI COMPONENTS--- */
@@ -1288,12 +1383,14 @@ section {
         border-color: var(--color-links-light);
         background-color: #F1DAFF;
         color: #611D8B;
+        /* display: table;
+        margin-left: auto;
+        margin-right: auto; */
 
         &:hover {
             border-color: var(--color-links-lighter);
             background-color: #9374a7;
             color: white;
-            (--color-links-lighter);
         }
     }
 
@@ -1643,50 +1740,118 @@ details {
     margin-bottom: .5em;
   }
   
-  .card-accordion summary {
-    color: #A28F6E;
-    text-align: center;
-    font-family: "Alumni Sans";
-    font-size: .5em;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+.card-accordion summary {
+color: #A28F6E;
+text-align: center;
+font-family: "Alumni Sans";
+font-size: .5em;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+list-style-type: none;
+margin-bottom: .25em;
+cursor: pointer;
+}
+
+
+.card-accordion summary::-moz-list-bullet {
     list-style-type: none;
-    margin-bottom: .25em;
-    cursor: pointer;
-  }
-  
-  
-  .card-accordion summary::-moz-list-bullet {
-      list-style-type: none;
-      display: block;
-  }
-  
-  
-  .card-accordion summary::before {
-      position: absolute;
-      right: 1em;
-      font-weight: normal;
-      transition: all 0.2s ease-out;
-  
-      /* Arrow Version */
-      border-right: 2px solid;
-      border-bottom: 2px solid;
-      content: "";
-      width: 8px;
-      height: 8px;
-      top: 1.4em;
-      transform: rotate(45deg) translate(-4px, -4px);
-  
-      /* Plus / Minus Version   */
-        /* content: "+"; */
-  }
-  
-  .card-accordion details[open] summary::before {
-      /* Arrow Version   */
-      transform: rotate(225deg);
-  
-      /* Plus / Minus Version   */ 
-      /* content: "|";
-      transform: rotate(-90deg); */
-  }
+    display: block;
+}
+
+
+.card-accordion summary::before {
+    position: absolute;
+    right: 1em;
+    font-weight: normal;
+    transition: all 0.2s ease-out;
+
+    /* Arrow Version */
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    content: "";
+    width: 8px;
+    height: 8px;
+    top: 1.4em;
+    transform: rotate(45deg) translate(-4px, -4px);
+
+    /* Plus / Minus Version   */
+    /* content: "+"; */
+}
+
+.card-accordion details[open] summary::before {
+    /* Arrow Version   */
+    transform: rotate(225deg);
+
+    /* Plus / Minus Version   */ 
+    /* content: "|";
+    transform: rotate(-90deg); */
+}
+
+
+
+
+/* PNG ANIMATIONS*/
+
+.waiving-hand {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+}
+
+.waiving-hand {
+    animation-name: wave;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: flex;
+}
+    
+@keyframes wave {
+    0% { transform: rotate( 0.0deg) }
+    15% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+    30% { transform: rotate(-8.0deg) }
+    40% { transform: rotate(14.0deg) }
+    50% { transform: rotate(-4.0deg) }
+    60% { transform: rotate(10.0deg) }
+    70% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+}
+
+
+.megaphone {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4em;
+    animation: scale-image;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scale-image {
+    90% {
+        transform: scale(1.2);
+    }
+}
+
+.handshake {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    margin-bottom: 10em;
+    animation: up-down;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes up-down {
+    0%, 100% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-40px);
+    }
+}
