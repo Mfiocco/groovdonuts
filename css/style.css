@@ -424,8 +424,8 @@ body {
 
     .toggle-menu {
 
-        --color-togglemenu-background: #468C8D;
-        --color-togglemenu-text: #ffffff;
+        --color-togglemenu-background: #171717;
+        --color-togglemenu-text: #FFEED0;
 
         display: flex;
         flex-direction: row-reverse;
@@ -494,21 +494,22 @@ body {
             top: 0;
             right: 0;
             z-index: 50;
-            width: 100%;
+            width: 40%;
             min-height: 100svh;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: left;
             font-family: anton;
-            font-size: 6em;
+            font-size: 7vw;
             transition: .4s all ease-out;
+            padding-left: .5em;
 
             a {
                 color: var(--color-togglemenu-text);
-                padding: 2vh 2vw;
+                padding: 1.5vh 1.5vw;
 
                 &:hover {
-                    color: #FFEED0;
+                    color: #a2dfe0;
                 }
             }
         }
